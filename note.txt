@@ -1,8 +1,24 @@
 1、github新建一个项目
 2、本地（根目录）初始化一个项目
-3、
+3、(第一次提交) git push -u origin main
+
 密令问题：https://blog.csdn.net/LanXiu_/article/details/122323713
 
 Git提示Connection was reset, errno 10054解决方法：
 	git config --global http.sslVerify "false"
 	https://blog.csdn.net/loulansd/article/details/121844302
+
+4、2，3.....次提交，用git push 就好
+
+5、本地配置ssh : https://blog.csdn.net/u013778905/article/details/83501204
+5-1、查看密钥是否存在
+	（1）cd ~/.ssh
+	（2）ls或者ll //看是否存在 id_rsa 和 id_rsa.pub文件，如果存在，说明已经有SSH Key
+	（3）生成：ssh-keygen -t rsa -C "xiangshuo1992@gmail.com"
+	（4）cat id_rsa.pub  //拷贝秘钥 ssh-rsa开头
+	（5）在github添加公钥
+测试是否成功：
+ssh -T git@github.com
+//运行结果出现类似如下
+Hi xiangshuo1992! You've successfully authenticated, but GitHub does not provide shell access.
+
