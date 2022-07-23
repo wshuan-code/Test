@@ -1,0 +1,8 @@
+1、github新建一个项目
+2、本地（根目录）初始化一个项目
+3、
+密令问题：https://blog.csdn.net/LanXiu_/article/details/122323713
+
+Git提示Connection was reset, errno 10054解决方法：
+	git config --global http.sslVerify "false"
+	https://blog.csdn.net/loulansd/article/details/121844302
